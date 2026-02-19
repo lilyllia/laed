@@ -75,7 +75,7 @@ int main(){
     imprimirVetor(dados, n);
     printf("Comparações: %d | Trocas: %d\n", comparacoes, trocas);
     
-    printf("\nEscolha qual teste fazer: ")
+    printf("\nEscolha qual teste fazer: ");
     scanf("%d", &teste);
     switch (teste)
     {
@@ -162,5 +162,5 @@ void minidesafio(){
 
 void exercicio(){
     int n = 20;
-    int normal[] = {123,3,2,234,34,4,9,456,6,55,0,2,55,4}
+    int normal[] = {13,3,2,234,34,4,9,56,6,55,0,2,55,4,75,7,3,25,76,3};
 }
