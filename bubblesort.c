@@ -1,7 +1,12 @@
 #include <stdio.h>
 
+//aula do dia 19 de fevereiro de 2026, quinta-feira
 int comparacoes = 0;  // Contador global
 int trocas = 0;       // Contador global
+
+void minidesafio();
+
+void inverter();
 
 //desafio extra: bubbleSort invertido
 void troSelbbub(int v[], int n){
@@ -30,6 +35,9 @@ void troSelbbub(int v[], int n){
 }
 
 void bubbleSort(int v[], int n) {
+    if(n==0 || v==NULL){
+        return;
+    }
     int i, j, aux, houveTroca;
 
     trocas = 0; //só por segurança
@@ -60,6 +68,8 @@ void imprimirVetor(int v[], int n) {
     printf("\n");
 }
 
+void testar(int v[])
+
 int main(){
     int dados[] = {64, 34, 25, 12, 22, 11, 90};
     int n = 7, teste;
@@ -69,20 +79,24 @@ int main(){
     printf("Vetor original: ");
     imprimirVetor(dados, n);
     
-    bubbleSort(dados, n);
+    troSelbbub(dados, n);
     
     printf("Vetor ordenado: ");
     imprimirVetor(dados, n);
     printf("Comparações: %d | Trocas: %d\n", comparacoes, trocas);
     
-    printf("\nEscolha qual teste fazer: ");
+
+    printf("\\n1 - BubbleSort decrescente.\n2 - Minidesafio.\n\nnEscolha qual teste fazer: ");
     scanf("%d", &teste);
     switch (teste)
     {
     case 1:
+        troSelbbub(dados, n);
+        imprimirVetor(dados, n);
+        break;
+    case 2:
         minidesafio();
         break;
-    
     default:
         break;
    
@@ -90,12 +104,21 @@ int main(){
     
     
     return 0;
+    }
 }
+
+void inverter(){
+    int n = 5;
+    int vazio[n];
+    int unitario[]= {1};
+    int ordenado[] = {1,2,3,4,5};
+    int inverso[] = {5,4,3,2,1};
+    int repetidos[] = {3,1,3,2,3};
 }
 
 void minidesafio(){
     int n = 5;
-    int vazio[] = {0};
+    int vazio[n];
     int unitario[]= {1};
     int ordenado[] = {1,2,3,4,5};
     int inverso[] = {5,4,3,2,1};
