@@ -68,8 +68,6 @@ void imprimirVetor(int v[], int n) {
     printf("\n");
 }
 
-void testar(int v[])
-
 int main(){
     int dados[] = {64, 34, 25, 12, 22, 11, 90};
     int n = 7, teste;
